@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bash.UnstructuredIO.Client", "Bash.UnstructuredIO.Client\Bash.UnstructuredIO.Client.csproj", "{3D8E8572-AF98-4506-8DBF-5796A0CADF6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bash.UnstructuredIO.Client", "Bash.UnstructuredIO.Client\Bash.UnstructuredIO.Client.csproj", "{3D8E8572-AF98-4506-8DBF-5796A0CADF6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bash.UnstructuredIO.Tests", "Bash.UnstructuredIO.Tests\Bash.UnstructuredIO.Tests.csproj", "{97A5537E-8A32-42B8-A061-69637D8B0438}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3D8E8572-AF98-4506-8DBF-5796A0CADF6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D8E8572-AF98-4506-8DBF-5796A0CADF6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D8E8572-AF98-4506-8DBF-5796A0CADF6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97A5537E-8A32-42B8-A061-69637D8B0438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97A5537E-8A32-42B8-A061-69637D8B0438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97A5537E-8A32-42B8-A061-69637D8B0438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97A5537E-8A32-42B8-A061-69637D8B0438}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
