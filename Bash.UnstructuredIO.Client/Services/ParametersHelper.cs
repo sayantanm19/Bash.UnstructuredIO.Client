@@ -14,10 +14,8 @@ namespace UnstructuredAPI.Services
                 throw new FileNotFoundException("File not found.", filePath);
             }
 
-            using (var stream = new FileStream(filePath, FileMode.Open))
-            {
-                AddFileFromStream(formContent, stream, filePath);
-            }
+            var stream = new FileStream(filePath, FileMode.Open);
+            AddFileFromStream(formContent, stream, filePath);
         }
         internal static void AddFileFromStream(MultipartFormDataContent formContent, Stream fileStream, string fileName)
         {
