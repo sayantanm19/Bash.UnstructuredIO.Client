@@ -2,7 +2,7 @@
 
 ### Unofficial .NET SDK for the Unstructured API</p>
 
-This is a .NET client for the [Unstructured API](https://unstructured-io.github.io/unstructured/api.html). 
+This is an unofficial .NET client for the [Unstructured API](https://unstructured-io.github.io/unstructured/api.html). Refer to [Official Unstructured API Docs](https://github.com/Unstructured-IO/unstructured-api) to understand about the project and steps to use the hosted service or deploy your own instance using Docker.
 
 ## Getting started
 
