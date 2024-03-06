@@ -1,13 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Common;
+using System.IO;
 using System.IO.Compression;
 using System.Net;
+using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.Mime;
-using System.Reflection.Metadata;
 using System.Text;
 using System.Text.Json;
 using System.Threading;
+using System.Threading.Tasks;
 using UnstructuredAPI.Interfaces;
 using UnstructuredAPI.Models;
 using UnstructuredAPI.Services;
@@ -21,17 +24,29 @@ namespace UnstructuredAPI
         /// <summary>
         /// Client for interacting with the Unstructured API.
         /// </summary>
-        public UnstructuredClient(string url, string? apiKey = null)
+        public UnstructuredClient(string url)
+        {
+            _client = SetupClient(url);
+        }
+
+        public UnstructuredClient(string url, string apiKey = null)
         {
             _client = SetupClient(url, apiKey);
         }
 
-        private HttpClient SetupClient(string url, string? apiKey)
+        private HttpClient SetupClient(string url)
         {
-            var client = new HttpClient(new SocketsHttpHandler
-            {
-                PooledConnectionLifetime = TimeSpan.FromMinutes(15)
-            });
+            var client = new HttpClient();
+            client.BaseAddress = new Uri(url);
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.TryAddWithoutValidation("Content-Type", "multipart/form-data");
+
+            return client;
+        }
+
+        private HttpClient SetupClient(string url, string apiKey)
+        {
+            var client = new HttpClient();
             client.BaseAddress = new Uri(url);
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             client.DefaultRequestHeaders.TryAddWithoutValidation("Content-Type", "multipart/form-data");
@@ -82,7 +97,7 @@ namespace UnstructuredAPI
 
             if (response.IsSuccessStatusCode)
             {
-                var deserializedElements = DeserializeResponse<List<Element>>(contents!);
+                var deserializedElements = DeserializeResponse<List<Element>>(contents);
                 return new ApiResponse
                 {
                     Data = deserializedElements,

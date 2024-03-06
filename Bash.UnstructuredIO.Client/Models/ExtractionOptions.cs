@@ -1,4 +1,6 @@
-﻿namespace UnstructuredAPI.Models
+﻿using System.Collections.Generic;
+
+namespace UnstructuredAPI.Models
 {
     public class ExtractionOptions
     {

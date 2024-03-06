@@ -1,4 +1,8 @@
-﻿using System.Net.Http.Headers;
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Net.Mime;
 using System.Text.Json;
 using UnstructuredAPI.Models;
@@ -73,7 +77,7 @@ namespace UnstructuredAPI.Services
                 if (parameterValue != null) formContent.Add(new StringContent(parameterValue), key);
             }
         }
-        internal static void AddListParameters(MultipartFormDataContent formContent, string key, IEnumerable<string?> values)
+        internal static void AddListParameters(MultipartFormDataContent formContent, string key, IEnumerable<string> values)
         {
             if (values.Count() > 0)
                 formContent.Add(new StringContent(JsonSerializer.Serialize(values)), key);
