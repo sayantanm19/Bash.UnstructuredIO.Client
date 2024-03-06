@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bash.UnstructuredIO.Client", "Bash.UnstructuredIO.Client\Bash.UnstructuredIO.Client.csproj", "{3D8E8572-AF98-4506-8DBF-5796A0CADF6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bash.UnstructuredIO.Tests", "Bash.UnstructuredIO.Tests\Bash.UnstructuredIO.Tests.csproj", "{97A5537E-8A32-42B8-A061-69637D8B0438}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bash.UnstructuredIO.Tests", "Bash.UnstructuredIO.Tests\Bash.UnstructuredIO.Tests.csproj", "{97A5537E-8A32-42B8-A061-69637D8B0438}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

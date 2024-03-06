@@ -9,14 +9,22 @@
 	<Authors>sayantanmaiti</Authors>
 	<Company>Bash Overflow</Company>
 	<PackageTags>unstrutured;chunking;client</PackageTags>
-	<Description>
-		This is a .NET client library for the Unstructured API.
-	</Description>
+	<Description>An unofficial .NET client library for the Unstructured API.</Description>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<RepositoryUrl>https://github.com/sayantanm19/Bash.UnstructuredIO.Client.git</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+	<PackageReleaseNotes>First beta release</PackageReleaseNotes>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Text.Json" Version="8.0.2" />
+	  
+	<None Include="..\README.md">
+		<Pack>True</Pack>
+		<PackagePath>\</PackagePath>
+	</None>
   </ItemGroup>
 
 </Project>
