@@ -5,7 +5,7 @@
 	<LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
 	<PackageId>Bash.UnstructuredIO.Client</PackageId>
-	<Version>1.0.0-beta.1</Version>
+	<Version>1.0.0-beta.2</Version>
 	<Authors>sayantanmaiti</Authors>
 	<Company>Bash Overflow</Company>
 	<PackageTags>unstrutured;chunking;client</PackageTags>
