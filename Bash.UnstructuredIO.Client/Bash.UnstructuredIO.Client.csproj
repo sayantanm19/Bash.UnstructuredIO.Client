@@ -1,9 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	<LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
+	<PackageId>Bash.UnstructuredIO.Client</PackageId>
+	<Version>1.0.0-beta.1</Version>
+	<Authors>sayantanmaiti</Authors>
+	<Company>Bash Overflow</Company>
+	<PackageTags>unstrutured;chunking;client</PackageTags>
+	<Description>
+		This is a .NET client library for the Unstructured API.
+	</Description>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="8.0.2" />
+  </ItemGroup>
 
 </Project>

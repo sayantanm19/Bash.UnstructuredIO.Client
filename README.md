@@ -1,6 +1,6 @@
 # Bash.UnstructuredIO.Client
 
-## Unofficial .NET SDK for the Unstructured API</p>
+### Unofficial .NET SDK for the Unstructured API</p>
 
 This is a .NET client for the [Unstructured API](https://unstructured-io.github.io/unstructured/api.html). 
 

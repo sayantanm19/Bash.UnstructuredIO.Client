@@ -1,4 +1,6 @@
-﻿namespace UnstructuredAPI.Models
+﻿using System.Collections.Generic;
+
+namespace UnstructuredAPI.Models
 {
     public class ExtractionOptions
     {
@@ -6,7 +8,7 @@
         public string Strategy { get; set; } = "auto";
 
         // gz_uncompressed_content_type
-        public string GzUncompressedContentType { get; set; }
+        public string? GzUncompressedContentType { get; set; }
 
         // output_format
         public string OutputFormat { get; set; } = "application/json";
@@ -18,7 +20,7 @@
         public string Encoding { get; set; } = "utf-8";
 
         // hi_res_model_name
-        public string HiResModelName { get; set; }
+        public string? HiResModelName { get; set; }
 
         // include_page_breaks
         public bool IncludePageBreaks { get; set; } = false;
@@ -36,7 +38,7 @@
         public bool XmlKeepTags { get; set; }
 
         // chunking_strategy
-        public string ChunkingStrategy { get; set; }
+        public string? ChunkingStrategy { get; set; }
 
         // multipage_sections
         public bool MultipageSections { get; set; } = true;
