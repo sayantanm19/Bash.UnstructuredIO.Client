@@ -19,7 +19,7 @@ namespace Bash.UnstructuredIO.Tests
         }
 
         [Fact]
-        public async Task Should_Partition_Pdf()
+        public async Task Should_Partition_Pdf_With_Coordinates()
         {
             var filePath = AssemblyDirectory + "\\SampleFiles\\Benefit_Options.pdf";
 
@@ -47,7 +47,7 @@ namespace Bash.UnstructuredIO.Tests
         }
 
         [Fact]
-        public async Task Should_Partition_ImageFile()
+        public async Task Should_Partition_ImageFile_With_Coordinates_Resolution()
         {
             var filePath = AssemblyDirectory + "\\SampleFiles\\sample_image.PNG";
             FileStream stream = File.OpenRead(filePath);
