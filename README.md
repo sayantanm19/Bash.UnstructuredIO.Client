@@ -28,15 +28,13 @@ builder.Services.AddSingleton<IUnstructuredClient>(
 UnstructuredClient unstructuredClient = new UnstructuredClient("http://localhost:8000", "my-key-123");
 ```
 
-## Change the base URL
-
-If you are self hosting the API, or developing locally, you can change the server URL when setting up the client. The api-key is optional and can be ommited.
+If you are self hosting the API, or developing locally, you can change the server URL when setting up the client. The **api-key** is **optional** and can be ommited.
 
 ## Usage
 
 ```csharp
 var filePath = "SampleFiles\\lorem_ipsum.docx";            
-var result = await unstructuredClient.PartitionAsync(filePath, CancellationToken.None);
+var result = await _unstructuredClient.PartitionAsync(filePath, CancellationToken.None);
 var elements = result.Data;
 
 foreach (var element in elements)
